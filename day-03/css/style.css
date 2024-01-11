@@ -1,13 +1,24 @@
 /* Try out various selectors on the Zen Garden */
 
-/* tag selector */
-h1 { 
+* {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
 
+/* tag selector */
+h1 {
+    color: blue;
+    font-size: 3em;
+    background-color: fuchsia;
 } /* applied to <h1> */
 
-/* class selector */
-.design-name { 
+p {
+    /* color: gold; */
+    font-family:'Courier New', Courier, monospace;
+}
 
+/* class selector */
+.design-name {
+    
 } /* applied to elements with `class="design-name"` */
 
 /* id selector */
@@ -16,8 +27,8 @@ h1 {
 } /* applied to the element with `id="zen-intro"` */
 
 /* group selector */
-.explanation .participation .benefits .requirements { 
-
+.explanation, .participation, .benefits, .requirements { 
+    color: salmon;
 } /* applied to ANY .explanation OR .participation OR .benefits OR .requirements */
 
 /* combined selector */
@@ -51,13 +62,13 @@ role {
 } /* applied to every element with role attribute */
 
 /* Attribute value selector */
-role article { 
-
+[role=article] { 
+    color: darkorange;
 } /* applied to every element with the value of article for the role attribute */
 
 /* Not selector */
-not p { 
-
+:not(p) {
+    background-color: midnightblue;
 } /* applied to all elements that are not the indicated element */
 
 /* All selector */

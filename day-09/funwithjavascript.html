@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Fun with JavaScript</title>
+		<script type="text/javascript">
+			<!--
+				/* This is a comment. This is writing to the doc! */
+				var name="Jacob";
+				var age;
+				age=111+45;
+				
+				function acting() {
+					alert("You are not acting your age.");
+					// document.write("You are not acting your age!");
+					document.getElementsByTagName("h1")[0].innerHTML="You are not acting your age!";
+				}
+				var pageTitle=document.title;
+				alert(pageTitle);
+				alert(document.getElementsByTagName("h1")[0]);
+				document.getElementsByTagName("h1")[0].innerHTML=pageTitle;
+				
+				document.write(document.referrer);
+			// -->
+		</script>
+	</head>
+	<body onload="acting()">
+		<h1>text</h1>
+		<script type="text/javascript">
+			document.write(document.title);
+		</script>
+		<p>JavaScript is really fun! ...</p>
+		<p>And really <strong>frustrating!</strong></p>
+		<button type="button" onclick="acting()">Click Me!</button>
+		<script type="text/javascript">
+			document.write("<h1>" + name + " is this old: " + age + "</h1>");
+			document.getElementsByTagName("h1")[0].innerHTML=pageTitle;
+		</script>
+	</body>
+</html>
+
+
+

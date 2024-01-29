@@ -3,15 +3,12 @@
 console.log("hello world");
 
 
-/* 
-function sayHello(name) {
+/* function sayHello(name) {
 	return "Hello, "+name;
 }
 
 let msg = sayHello("Jacob");
-console.log(msg); //"Hello, Jacob"
-
- */
+console.log(msg); //"Hello, Jacob" */
 
 /*
 

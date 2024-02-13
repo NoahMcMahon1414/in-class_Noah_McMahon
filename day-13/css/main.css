@@ -1,1 +1,15 @@
 /* Assign styles here */
+.person {
+    border: 5px solid purple;
+    margin: 0 0 .2em 0;
+    padding: .2em;
+}
+
+.person p:first-child {
+    color: blue;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.person p:nth-child(2) {
+    color: red;
+}

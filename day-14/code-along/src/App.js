@@ -1,5 +1,5 @@
 // Import Component
-import React, { Component, useState } from 'react';
+import React, { useState } from 'react';
 
 // UserInput component
 const UserInput = (props) => {
@@ -7,6 +7,11 @@ const UserInput = (props) => {
     // Return an input element that, on change, does the event passed to update via props
         return (
           <div>
+            <input 
+              className="form-control mb-2"
+              placeholder='Search Employees...'
+              onChange={(e) => props.update(e)}
+            />
           </div>
         )
     }
@@ -41,7 +46,9 @@ const Table = (props) => {
                     <th>Salary</th>
                   </tr>
                   {
-                  // write your code here!
+                  props.data.map((d, i) => {
+                    return <TableRow key={'person-'+i} name={d.name} salary={d.salary} title={d.title} />
+                  })
                   }
                 </tbody>
               </table>
@@ -57,7 +64,7 @@ const SearchApp = (props) => {
   // In this event, get the target value, and reset the state of `search`
   const handleChange = (event) => {
       // Get event value and set the state of Search to trigger a re-rendering
-
+      setSearch(event.target.value);
   }
 
 
@@ -74,6 +81,8 @@ const SearchApp = (props) => {
     // Return a `div` containing a  `UserInput` component and a `Table` component
     return (
         <div>
+          <UserInput update={handleChange} />
+          <Table data={employees} />
         </div>
     )
 }

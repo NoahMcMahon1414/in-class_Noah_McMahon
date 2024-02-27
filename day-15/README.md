@@ -1,37 +1,70 @@
-# React Activity
+# Getting Started with Create React App
 
-In this activity, we'll walk through **all** of the steps of building an interactive visualization in React. Follow the steps below to build an interactive bar chart of Olympic Medalists.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Instructions
-1. Transform the scaffolding of this application by running `create-react-app .` _in this folder_. Note the `.` after `create-react-app`, which will create the app in the _current folder_. Before you can do this, you'll need to **temporarily move** the content in the folder because the file names _may_ conflict (you can move them to your `Desktop/`).
+## Available Scripts
 
-2. Move this `README.md` file back into the folder. Also, move the `data/` folder into the recently created `public/` folder. This is where you'll need to store publicly accessible content (`.csv` files, images, etc.).
+In the project directory, you can run:
 
-3. We'll a variety of data manipulation functions from the `d3` (i.e., loading data, grouping data, etc.). Use `npm` to _install_ the `d3` package, making sure to **save it** to your `package.json` file.
+### `npm start`
 
-4. Open up your `App.js` file and remove all unnecessary content(some `import` statements, the current content returned by the `render()` method, etc.).
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-5. Write a `constructor` method in which you set the initial state. You should define `data` to an empty array, and `xVariable` to `sport`.
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-6. Now we'll **load our data**. To do this, import the `d3` package. Then, create a `componentDidMount()` method on your `App` class that loads the data from `data/medalists.csv`. Load your data with the `d3.csv` method, then should set the `data` attribute of state to trigger a re-rendering. To see if this worked, add a `console.log` statement to your `render()` method where you log the data.
+### `npm test`
 
-7. We'll want to group our data by our `xVariable` to change what goes on the xAxis (i.e., are we looking by sport, by country, by year, etc.). Take a few minutes and read through [this tutorial](http://learnjsdata.com/group_data.html) on grouping data. Then, create a variable `chartData` that is an **array of objects**, one for each observation. For example, if the `xVarible` is `year`, one of those objects would be `{x:2000, y:145}`, where `y` is the total number of medalists for that year.
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-8. Now that we have the data to graph, we'll need to install and import our charting library. Begin by install (and saving) the `recharts` package using `npm`. Then, in your `App.js` file, import these named exports from the library: BarChart, XAxis, YAxis, CartesianGrid, Tooltip, Bar.
+### `npm run build`
 
-9. Run ```npx react-codemod rename-unsafe-lifecycles``` to fix issues with this codebase
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-10. Using the [documentation](http://recharts.org/#/en-US/) as a reference, make a bar chart on your page!
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-11. To make the page interactive, we'll add a `ButtonGroup` for your user to select the `xVariable`. To do this, we'll use `reactstrap` to have bootstrap styled components ([docs](https://reactstrap.github.io/components/button-group/)). We'll need to install both `bootstrap` and `reactstrap` using npm, then import this content:
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-```javascript
-// Get bootstrap css
-import 'bootstrap/dist/css/bootstrap.css';
+### `npm run eject`
 
-// Import dropdown menu
-import { Button, ButtonGroup } from 'reactstrap';
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-```
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-12. To create your `Button` elements in your `ButtonGroup`, I suggest you iterate through an array of options (i.e., `['Sport', 'Year', 'CountryName']`). Then, return a `<Button` element, that (when clicked) updates the state of `xVariable` (you should now write a function that does that as well).
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

@@ -1,0 +1,69 @@
+[debug] [2024-02-29T00:13:16.685Z] ----------------------------------------------------------------------
+[debug] [2024-02-29T00:13:16.689Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\noahm\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2024-02-29T00:13:16.689Z] CLI Version:   13.4.0
+[debug] [2024-02-29T00:13:16.690Z] Platform:      win32
+[debug] [2024-02-29T00:13:16.690Z] Node Version:  v21.5.0
+[debug] [2024-02-29T00:13:16.690Z] Time:          Wed Feb 28 2024 16:13:16 GMT-0800 (Pacific Standard Time)
+[debug] [2024-02-29T00:13:16.690Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-02-29T00:13:16.781Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-02-29T00:13:16.782Z] > authorizing via signed-in user (nam1414@uw.edu)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\noahm\Documents\INFO_340_Files\in-class_Noah_McMahon\day-16
+
+Before we get started, keep in mind:
+
+  * You are initializing within an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2024-02-29T00:13:52.491Z] Using project from CLI flag: day-17-demo-bfba0
+[debug] [2024-02-29T00:13:52.498Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/day-17-demo-bfba0 [none]
+[debug] [2024-02-29T00:13:52.854Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/day-17-demo-bfba0 200
+[debug] [2024-02-29T00:13:52.855Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/day-17-demo-bfba0 {"projectId":"day-17-demo-bfba0","projectNumber":"888979190167","displayName":"day-17-demo","name":"projects/day-17-demo-bfba0","resources":{"hostingSite":"day-17-demo-bfba0","realtimeDatabaseInstance":"day-17-demo-bfba0-default-rtdb"},"state":"ACTIVE","etag":"1_0dc9c450-eea7-42b8-94cc-fbde1c0db093"}
+[info] i  Using project day-17-demo-bfba0 (day-17-demo) 
+[info] 
+=== Database Setup
+[info] i  database: ensuring required API firebasedatabase.googleapis.com is enabled... 
+[debug] [2024-02-29T00:13:52.868Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/day-17-demo-bfba0/services/firebasedatabase.googleapis.com [none]
+[debug] [2024-02-29T00:13:52.868Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/day-17-demo-bfba0/services/firebasedatabase.googleapis.com x-goog-quota-user=projects/day-17-demo-bfba0
+[debug] [2024-02-29T00:13:53.451Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/day-17-demo-bfba0/services/firebasedatabase.googleapis.com 200
+[debug] [2024-02-29T00:13:53.452Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/day-17-demo-bfba0/services/firebasedatabase.googleapis.com [omitted]
+[info] +  database: required API firebasedatabase.googleapis.com is enabled 
+[info] 
+[debug] [2024-02-29T00:13:53.455Z] >>> [apiv2][query] GET https://firebasedatabase.googleapis.com/v1beta/projects/day-17-demo-bfba0/locations/-/instances/day-17-demo-bfba0-default-rtdb [none]
+[debug] [2024-02-29T00:13:53.861Z] <<< [apiv2][status] GET https://firebasedatabase.googleapis.com/v1beta/projects/day-17-demo-bfba0/locations/-/instances/day-17-demo-bfba0-default-rtdb 200
+[debug] [2024-02-29T00:13:53.862Z] <<< [apiv2][body] GET https://firebasedatabase.googleapis.com/v1beta/projects/day-17-demo-bfba0/locations/-/instances/day-17-demo-bfba0-default-rtdb {"name":"projects/888979190167/locations/us-central1/instances/day-17-demo-bfba0-default-rtdb","project":"projects/888979190167","databaseUrl":"https://day-17-demo-bfba0-default-rtdb.firebaseio.com","type":"DEFAULT_DATABASE","state":"ACTIVE"}
+[info] 
+[info] Firebase Realtime Database Security Rules allow you to define how your data should be
+[info] structured and when your data can be read from and written to.
+[info] 
+[debug] [2024-02-29T00:13:58.363Z] >>> [apiv2][query] GET https://day-17-demo-bfba0-default-rtdb.firebaseio.com/.settings/rules.json [none]
+[debug] [2024-02-29T00:13:58.521Z] <<< [apiv2][status] GET https://day-17-demo-bfba0-default-rtdb.firebaseio.com/.settings/rules.json 200
+[debug] [2024-02-29T00:13:58.521Z] <<< [apiv2][body] GET https://day-17-demo-bfba0-default-rtdb.firebaseio.com/.settings/rules.json [stream]
+[info] +  Database Rules for day-17-demo-bfba0-default-rtdb have been written to database.rules.json. 
+[info] Future modifications to database.rules.json will update Realtime Database Security Rules when you run
+[info] firebase deploy.
+[info] 
+=== Hosting Setup
+[debug] [2024-02-29T00:13:58.529Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/day-17-demo-bfba0 [none]
+[debug] [2024-02-29T00:13:58.656Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/day-17-demo-bfba0 200
+[debug] [2024-02-29T00:13:58.656Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/day-17-demo-bfba0 {"projectId":"day-17-demo-bfba0","projectNumber":"888979190167","displayName":"day-17-demo","name":"projects/day-17-demo-bfba0","resources":{"hostingSite":"day-17-demo-bfba0","realtimeDatabaseInstance":"day-17-demo-bfba0-default-rtdb"},"state":"ACTIVE","etag":"1_0dc9c450-eea7-42b8-94cc-fbde1c0db093"}
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 

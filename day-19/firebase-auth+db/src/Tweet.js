@@ -1,6 +1,6 @@
 import React from 'react';
 import { format } from 'date-fns'; // Use your preferred date formatting library
-import { Card, CardBody, CardTitle, CardSubtitle, CardText, CardFooter } from 'reactstrap';
+import { Card, CardBody, CardTitle, CardSubtitle, CardText, CardFooter, Button } from 'reactstrap';
 import './Tweet.css';
 
 function Tweet(props) {
@@ -16,11 +16,14 @@ function Tweet(props) {
                     {formattedDate}
                 </CardSubtitle>
                 <CardText>{props.info.text}</CardText>
+                <Button color="info" onClick={props.update}>
+                    Like this tweet!
+                </Button>
             </CardBody>
-            <CardFooter className="likes" onClick={props.update}>
-                    Likes: {props.info.likes}
-                </CardFooter>
-        </Card> 
+            <CardFooter class='likes'>
+                Total Likes: {props.info.likes}
+            </CardFooter>
+        </Card>
     );
 }
 
